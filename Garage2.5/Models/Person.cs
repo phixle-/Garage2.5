@@ -11,8 +11,9 @@ namespace Garage2._5.Models
         [Key]
         public int Id { get; set; }
 
-        public int PNR { get; set; }
-        
+        [Required, MinLength(8), MaxLength(12)]
+        public string SSN { get; set; }
+
         [Required]
         public string Name { get; set; }
 

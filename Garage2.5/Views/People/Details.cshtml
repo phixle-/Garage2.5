@@ -1,8 +1,11 @@
-﻿@model Garage2._5.Models.Person
+﻿@*@model Garage2._5.Models.Person
 
 @{
     ViewBag.Title = "Details";
-}
+    ViewBag.IsOwner = (Model.Owner != null) ? "Ja" : "Nej";
+    }
+
+
 
 <h2>Details</h2>
 
@@ -39,7 +42,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Owner)
+            @ViewBag.IsOwner
         </dd>
 
     </dl>
@@ -48,4 +51,4 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Become Owner", "BeOwn", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
-</p>
+</p>*@

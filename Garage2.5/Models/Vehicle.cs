@@ -11,7 +11,7 @@ namespace Garage2._5.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
+        [Required, MinLength(6), MaxLength(7)]
         public string RegNr { get; set; }
 
         [Required]

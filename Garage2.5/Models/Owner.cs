@@ -14,6 +14,6 @@ namespace Garage2._5.Models
 
         public virtual Person Person { get; set; }
 
-        public virtual ICollection<Vehicle> Vehicles { get; set; } 
+        public virtual ICollection<Vehicle> Vehicles { get; set; }
     }
 }
