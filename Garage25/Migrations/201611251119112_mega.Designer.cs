@@ -7,13 +7,13 @@ namespace Garage25.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class ownerdoesnothavepersonandvehicle : IMigrationMetadata
+    public sealed partial class mega : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ownerdoesnothavepersonandvehicle));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(mega));
         
         string IMigrationMetadata.Id
         {
-            get { return "201611250940538_ownerdoesnothavepersonandvehicle"; }
+            get { return "201611251119112_mega"; }
         }
         
         string IMigrationMetadata.Source

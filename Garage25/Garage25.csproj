@@ -122,41 +122,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611250819001_m_VehicleType.cs" />
-    <Compile Include="Migrations\201611250819001_m_VehicleType.Designer.cs">
-      <DependentUpon>201611250819001_m_VehicleType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611250822294_m_Person.cs" />
-    <Compile Include="Migrations\201611250822294_m_Person.Designer.cs">
-      <DependentUpon>201611250822294_m_Person.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611250825036_m_Owner.cs" />
-    <Compile Include="Migrations\201611250825036_m_Owner.Designer.cs">
-      <DependentUpon>201611250825036_m_Owner.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611250838231_m_Vehicle2.cs" />
-    <Compile Include="Migrations\201611250838231_m_Vehicle2.Designer.cs">
-      <DependentUpon>201611250838231_m_Vehicle2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611250922055_VTstring.cs" />
-    <Compile Include="Migrations\201611250922055_VTstring.Designer.cs">
-      <DependentUpon>201611250922055_VTstring.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611250940538_ownerdoesnothavepersonandvehicle.cs" />
-    <Compile Include="Migrations\201611250940538_ownerdoesnothavepersonandvehicle.Designer.cs">
-      <DependentUpon>201611250940538_ownerdoesnothavepersonandvehicle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611250944496_owner_is_person.cs" />
-    <Compile Include="Migrations\201611250944496_owner_is_person.Designer.cs">
-      <DependentUpon>201611250944496_owner_is_person.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611250946248_vehicle_has_type.cs" />
-    <Compile Include="Migrations\201611250946248_vehicle_has_type.Designer.cs">
-      <DependentUpon>201611250946248_vehicle_has_type.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611251002572_owner_has_vehicles.cs" />
-    <Compile Include="Migrations\201611251002572_owner_has_vehicles.Designer.cs">
-      <DependentUpon>201611251002572_owner_has_vehicles.cs</DependentUpon>
+    <Compile Include="Migrations\201611251119112_mega.cs" />
+    <Compile Include="Migrations\201611251119112_mega.Designer.cs">
+      <DependentUpon>201611251119112_mega.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Owner.cs" />
@@ -215,32 +183,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611250819001_m_VehicleType.resx">
-      <DependentUpon>201611250819001_m_VehicleType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611250822294_m_Person.resx">
-      <DependentUpon>201611250822294_m_Person.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611250825036_m_Owner.resx">
-      <DependentUpon>201611250825036_m_Owner.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611250838231_m_Vehicle2.resx">
-      <DependentUpon>201611250838231_m_Vehicle2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611250922055_VTstring.resx">
-      <DependentUpon>201611250922055_VTstring.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611250940538_ownerdoesnothavepersonandvehicle.resx">
-      <DependentUpon>201611250940538_ownerdoesnothavepersonandvehicle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611250944496_owner_is_person.resx">
-      <DependentUpon>201611250944496_owner_is_person.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611250946248_vehicle_has_type.resx">
-      <DependentUpon>201611250946248_vehicle_has_type.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611251002572_owner_has_vehicles.resx">
-      <DependentUpon>201611251002572_owner_has_vehicles.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611251119112_mega.resx">
+      <DependentUpon>201611251119112_mega.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

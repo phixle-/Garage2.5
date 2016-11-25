@@ -11,7 +11,7 @@ namespace Garage25.Models
         [Key]
         public int Id { get; set; }
 
-        [Required, MaxLength(20)]
+        [Required, MinLength(8), MaxLength(12)]
         public string SSN { get; set; }
 
         [Required]
@@ -20,6 +20,6 @@ namespace Garage25.Models
         [Required]
         public string LastName { get; set; }
 
-        //public virtual Owner Owner { get; set; }
+        public virtual Owner Owner { get; set; }
     }
 }

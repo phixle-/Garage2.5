@@ -16,6 +16,10 @@ namespace Garage25
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //var configuration = new Migrations.Configuration();
+            //var migrator = new DbMigrator(configuration);
+            //migrator.Update();
         }
     }
 }
