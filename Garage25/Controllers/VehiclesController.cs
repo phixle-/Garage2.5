@@ -40,6 +40,7 @@ namespace Garage25.Controllers
         // GET: Vehicles/Create
         public ActionResult Create()
         {
+            ViewBag.VehicleTypes = repo.GetAllVehicleTypes();
             return View();
         }
 
@@ -56,6 +57,7 @@ namespace Garage25.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.VehicleTypes = repo.GetAllVehicleTypes();
             return View(vehicle);
         }
 
