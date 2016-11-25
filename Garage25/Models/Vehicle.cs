@@ -26,10 +26,9 @@ namespace Garage25.Models
         [Required]
         public string Model { get; set; }
 
-        //[Required]
-        //public virtual VehicleType VehicleType { get; set; }
+        [Required]
+        public virtual VehicleType VehicleType { get; set; }
 
-        //public virtual Owner Owner { get; set; }
-
+        public virtual Owner Owner { get; set; }
     }
 }

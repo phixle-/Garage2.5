@@ -9,9 +9,9 @@ namespace Garage25.Models
     public class VehicleType
     {
         [Key]
-        public int Id {get;set;}
+        public int Id { get;set; }
 
         [Required]
-        public string Type {get;set;}
+        public string Type { get;set; }
     }
 }

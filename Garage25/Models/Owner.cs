@@ -12,9 +12,9 @@ namespace Garage25.Models
         public int Id { get; set; }
 
         [Required]
-        public int Person_Id { get; set; }
+        public int PersonId { get; set; }
+        public virtual Person Person { get; set; }
 
-        [Required]
-        public int Vehicle_Id { get; set; }
+        public ICollection<Vehicle> Vehicles { get; set; }
     }
 }
