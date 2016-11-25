@@ -12,9 +12,6 @@ namespace Garage25.Models
         public int Id {get;set;}
 
         [Required]
-        public int Type {get;set;}
-
-        [Required]
-        public int Vehicle_ID {get;set;}
+        public string Type {get;set;}
     }
 }

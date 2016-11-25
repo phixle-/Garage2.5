@@ -138,6 +138,10 @@
     <Compile Include="Migrations\201611250838231_m_Vehicle2.Designer.cs">
       <DependentUpon>201611250838231_m_Vehicle2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611250922055_VTstring.cs" />
+    <Compile Include="Migrations\201611250922055_VTstring.Designer.cs">
+      <DependentUpon>201611250922055_VTstring.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Owner.cs" />
     <Compile Include="Models\Person.cs" />
@@ -206,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611250838231_m_Vehicle2.resx">
       <DependentUpon>201611250838231_m_Vehicle2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611250922055_VTstring.resx">
+      <DependentUpon>201611250922055_VTstring.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
