@@ -15,41 +15,27 @@ namespace Garage25.Migrations
 
         protected override void Seed(Garage25.DataAccess.AppContext c)
         {
-            string[] types = { "Car", "Truck", "Boat", "Bike" };
+            // Typer
+            var car   = new VehicleType { Type = "Car" };
+            var truck = new VehicleType { Type = "Truck" };
+            var boat  = new VehicleType { Type = "Boat" };
+            var bike  = new VehicleType { Type = "Bike" };
+            c.db_VehicleTypes.AddOrUpdate(vt => vt.Type, car, truck, boat, bike);
 
-            Vehicle v1 = new Vehicle { Id = 1, RegNr = "KSU583", Color = "White", NumberOfWheels = 4, Manufacturer = "Volvo", Model = "240"};
-            c.db_Vehicles.AddOrUpdate(
-                v => v.RegNr,
-                v1
-            );
+            // Fordon
+            var v1 = new Vehicle { RegNr = "KSU583", Color = "Vit",   NumberOfWheels = 4, Manufacturer = "Volvo", Model = "240",     VehicleType = car };
+            var v2 = new Vehicle { RegNr = "AUD001", Color = "Svart", NumberOfWheels = 4, Manufacturer = "Audi",  Model = "Quattro", VehicleType = car };
+            c.db_Vehicles.AddOrUpdate(v => v.RegNr, v1, v2);
 
-            VehicleType vt1 = new VehicleType { Vehicle_ID = v1.Id, Type = 1 };
-            c.db_VehicleTypes.AddOrUpdate(
-                vt => vt.Vehicle_ID,
-                vt1
-            );
+            // Personer
+            var p1 = new Person { FirstName = "Steve", LastName = "Smith", SSN = "123456789" };
+            var p2 = new Person { FirstName = "Benny", LastName = "hill",  SSN = "8765432101" };
+            c.db_Persons.AddOrUpdate(p => p.SSN, p1, p2);
 
-            Person p1 = new Person { Id = 1, FirstName = "Steve", LastName = "Smith", SSN = "123456789" };
-            c.db_Persons.AddOrUpdate(
-                p => p.SSN,
-                p1
-            );
-            
-                
-
-
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            // Ägare
+            var o1 = new Owner { PersonId = p1.Id };
+            var o2 = new Owner { PersonId = p2.Id };
+            c.db_Owners.AddOrUpdate(o => o.Person, o1, o2);
         }
     }
 }
