@@ -31,11 +31,6 @@ namespace Garage2._5.Repositories
             return db.db_Persons.Find(id);
         }
 
-        public IEnumerable<Owner> GetAllOwners()
-        {
-            return db.db_Owners;
-        }
-
         public void AddPerson(Person p)
         {
             db.db_Persons.Add(p);
@@ -51,17 +46,6 @@ namespace Garage2._5.Repositories
         public void RemovePerson(Person p)
         {
             db.db_Persons.Remove(p);
-            db.SaveChanges();
-        }
-
-        public void MakeOwner(Vehicle v, Person p)
-        {
-
-        }
-
-        public void BecomeOwner(int id)
-        {
-            //db.Owners.Add(new Owner { PersonId = id });
             db.SaveChanges();
         }
 
@@ -135,5 +119,51 @@ namespace Garage2._5.Repositories
         }
 
         #endregion
+
+        #region Owner
+
+        public IEnumerable<Owner> GetAllOwners()
+        {
+            return db.db_Owners;
+        }
+
+
+
+        public void MakeOwner(Vehicle v, Person p)
+        {
+
+        }
+
+        public void BecomeOwner(int id)
+        {
+            //db.Owners.Add(new Owner { PersonId = id });
+            db.SaveChanges();
+        }
+
+        public Owner FindOwnerById(int? id)
+        {
+            return db.db_Owners.Find(id);
+        }
+
+        public void AddOwner(Owner o)
+        {
+            db.db_Owners.Add(o);
+            db.SaveChanges();
+        }
+
+        public void UpdateOwner(Owner o)
+        {
+            db.Entry(o).State = EntityState.Modified;
+            db.SaveChanges();
+        }
+        
+        public void RemoveOwner(int id)
+        {
+            db.db_Owners.Remove(FindOwnerById(id));
+            db.SaveChanges();
+        }
+
+        #endregion
+
     }
 }
