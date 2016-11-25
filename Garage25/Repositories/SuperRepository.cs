@@ -1,5 +1,5 @@
 ﻿using Garage25.DataAccess;
-using Garage25.Models;
+using Garage25.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -122,12 +122,10 @@ namespace Garage2._5.Repositories
 
         #region Owner
 
-        public IEnumerable<Owner> GetAllOwners()
+        public List<Owner> GetAllOwners()
         {
-            return db.db_Owners;
+            return db.db_Owners.ToList();
         }
-
-
 
         public void MakeOwner(Vehicle v, Person p)
         {

@@ -1,4 +1,4 @@
-﻿using Garage25.Models;
+﻿using Garage25.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -7,7 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Garage25.DataAccess;
-using Garage25.Models;
+using Garage25.Entities;
 using Garage2._5.Repositories;
 
 namespace Garage25.Controllers

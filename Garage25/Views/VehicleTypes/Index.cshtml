@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Garage25.Models.VehicleType>
+﻿@model IEnumerable<Garage25.Entities.VehicleType>
 
 @{
     ViewBag.Title = "Index";
@@ -9,6 +9,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
 <table class="table">
     <tr>
         <th>
@@ -22,30 +23,29 @@
 
 @foreach (var item in Model) {
     
-     
     <tr>
         <td>
             @{
                 switch (item.Type)
                 {
-                    case 1:
+                    case "Car":
                         <text>Bil</text>
                         break;
-                    case 2:
+                    case "Truck":
                         <text>Lastbil</text>
                         break;
-                    case 3:
+                    case "Boat":
                         <text>Båt</text>
                         break;
-                    case 4:
+                    case "Bike":
                         <text>Motorcykel</text>
                         break;
                 }
             }
         </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.Vehicle_ID)
-        </td>
+        </td>*@
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
             @Html.ActionLink("Details", "Details", new { id=item.Id }) |
