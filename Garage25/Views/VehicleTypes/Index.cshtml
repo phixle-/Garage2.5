@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Garage25.Models.VehicleType>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Fordonstyp
+        </th>
+        <th>
+            Antal fordon
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    
+     
+    <tr>
+        <td>
+            @{
+                switch (item.Type)
+                {
+                    case 1:
+                        <text>Bil</text>
+                        break;
+                    case 2:
+                        <text>Lastbil</text>
+                        break;
+                    case 3:
+                        <text>Båt</text>
+                        break;
+                    case 4:
+                        <text>Motorcykel</text>
+                        break;
+                }
+            }
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vehicle_ID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
