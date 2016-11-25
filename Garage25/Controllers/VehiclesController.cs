@@ -17,9 +17,15 @@ namespace Garage25.Controllers
         private SuperRepository repo = new SuperRepository();
 
         // GET: Vehicles
-        public ActionResult Index()
+        public ActionResult Index(string search, string type)
         {
-            return View(repo.GetAllVehicles());
+            ViewBag.VehicleTypes = repo.GetAllVehicleTypeNames();
+            ViewBag.type = type;
+
+            ViewBag.Search = search;
+            // || v.Owner.Person.FirstName == search || v.Owner.Person.LastName == search 
+            var vehicles = repo.GetVehiclesFromSearch(search, type);
+            return View(vehicles);
         }
 
         // GET: Vehicles/Details/5

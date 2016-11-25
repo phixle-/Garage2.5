@@ -63,6 +63,16 @@ namespace Garage2._5.Repositories
             return db.db_VehicleTypes.ToList();
         }
 
+        public List<string> GetAllVehicleTypeNames()
+        {
+            List<string> tmp = new List<string>();
+            foreach(var vt in db.db_VehicleTypes)
+            {
+                tmp.Add(vt.Type);
+            }
+            return tmp;
+        }
+
         public VehicleType FindVehicleTypeById(int? id)
         {
             return db.db_VehicleTypes.Find(id);
@@ -89,6 +99,27 @@ namespace Garage2._5.Repositories
         #endregion
 
         #region Vehicle
+
+        public string NumToType(string type)
+        {
+            string tmp = "";
+            switch(type)
+            {
+                case "Car":
+                    tmp = "1";
+                    break;
+                case "Truck":
+                    tmp = "2";
+                    break;
+                case "Boat":
+                    tmp = "3";
+                    break;
+                case "Bike":
+                    tmp = "4";
+                    break;
+            }
+            return tmp;
+        }
 
         public List<Vehicle> GetAllVehicles()
         {
@@ -159,6 +190,20 @@ namespace Garage2._5.Repositories
         {
             db.db_Owners.Remove(FindOwnerById(id));
             db.SaveChanges();
+        }
+
+        #endregion
+
+        #region Search
+
+        public List<Vehicle> GetVehiclesFromSearch(string search, string type)
+        {
+            return GetAllVehicles()
+                .Where(v => (
+                        (v.Manufacturer == search || v.RegNr == search || v.Color == search || v.NumberOfWheels.ToString() == search || search == "")
+                     && (v.VehicleType.Type == type || type == "")
+                       ))
+                .ToList();
         }
 
         #endregion
